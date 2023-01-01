@@ -16,7 +16,12 @@ grade_values = {
 }
 
 # Prompt the user to enter the number of subjects
-num_subjects = int(input("Enter the number of subjects: "))
+while True:
+    try:
+        num_subjects = int(input("Enter the number of subjects: "))
+        break
+    except ValueError:
+        print("Invalid input. Please enter a number.")
 
 # Initialize variables to store the total GPA and the number of subjects
 total_gpa = 0
